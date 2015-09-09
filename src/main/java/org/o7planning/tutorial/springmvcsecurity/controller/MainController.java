@@ -1,7 +1,7 @@
-package org.hospital.prithvi;
-
+package org.o7planning.tutorial.springmvcsecurity.controller;
+ 
 import java.security.Principal;
-
+ 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,7 +41,7 @@ public class MainController {
    public String loginPage(Model model, Principal principal) {
        model.addAttribute("title", "User Info");
  
-       // user login
+       // Sau khi user login thanh cong se co principal
        String userName = principal.getName();
  
        model.addAttribute("message",

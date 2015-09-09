@@ -2,9 +2,9 @@
 <%@page session="true"%>
  
 <html>
-<head><title>Welcome Admin</title></head>
+<head><title>${title}</title></head>
 <body>
-   <h2>Message : Please enter the credentials</h2>
+   <h2>Message : ${message}</h2>
  
    <c:if test="${pageContext.request.userPrincipal.name != null}">
       <h3>Welcome : ${pageContext.request.userPrincipal.name}
