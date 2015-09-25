@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
  
 @Controller
+
 public class MainController {
  
    @RequestMapping(value = { "/", "/welcome" }, method = RequestMethod.GET)
@@ -20,7 +21,7 @@ public class MainController {
    @RequestMapping(value = "/admin", method = RequestMethod.GET)
    public String adminPage(Model model) {
        model.addAttribute("title", "Admin");
-       model.addAttribute("message", "Admin Page - This is protected page!");
+       model.addAttribute("message", "Admin Page - This is protected page! Select the form you need to print");
        return "adminPage";
    }
  
@@ -41,7 +42,7 @@ public class MainController {
    public String loginPage(Model model, Principal principal) {
        model.addAttribute("title", "User Info");
  
-       // Sau khi user login thanh cong se co principal
+       
        String userName = principal.getName();
  
        model.addAttribute("message",

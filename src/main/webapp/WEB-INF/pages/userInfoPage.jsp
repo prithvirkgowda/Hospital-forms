@@ -2,13 +2,23 @@
 <%@page session="true"%>
  
 <html>
-<head><title>${title}</title></head>
+<head><title>${title}</title>
+
+</head>
 <body>
    <h2>Message : ${message}</h2>
  
    <c:if test="${pageContext.request.userPrincipal.name != null}">
       <h3>User Info : ${pageContext.request.userPrincipal.name}
-          | <a href="<c:url value="/logout" />" >Logout</a></h3>  
-   </c:if>  
+          | <a href="<c:url value="/logout" />" >Logout</a></h3>
+     </c:if>
+       <table>
+       <tr>
+          <td>AppID</td>
+          <td>FormName</td>
+          <td>Download</td>
+       </tr>
+       </table>
+       
 </body>
 </html>
